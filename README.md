@@ -1,62 +1,61 @@
-# s21_matrix  
+# s21_matrix
 
-Implementation of the matrix.h library.   
+Реализация библиотеки matrix.h.
 
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), **чтобы поделиться с нами обратной связью на этот проект**. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents  
+## Contents
 
 1. [Chapter I](#chapter-i) \
-   1.1. [Introduction](#introduction)
+    1.1. [Introduction](#introduction)
 2. [Chapter II](#chapter-ii) \
-   2.1. [Information](#information)
+    2.1. [Information](#information)
 3. [Chapter III](#chapter-iii) \
-   3.1. [Part 1](#part-1-implementation-of-the-matrixh-library-functions)
+    3.1. [Part 1](#part-1-реализация-функции-библиотеки-matrixh)  
 
 
-# Chapter I  
+# Chapter I
 
-![matrix](misc/eng/images/matrixx.png)
+![matrix](misc/rus/images/matrixx.png)
 
-Planet Earth, September 13, 2000.  
+Планета Земля, 13 сентября 2000 года. 
 
-*"Our CEO has such a wonderful country house! It has everything you need to realise your ideas. A veranda overlooking a huge swimming pool on the lawn completes the picture of a keen and intelligent person."*
+*— Все же чудесный загородный дом у нашего CEO, есть все для воплощения идей! Огромный бассейн на лужайке и веранда с видом на него ещё больше дополняют образ увлеченного и умного человека.*
 
-*"Yes, I agree, so glad we were invited here, this place is very energetic!"*  
+*— Да, соглашусь, очень рад, что нас сюда пригласили, замечательное место!*
 
-*"Absolutely! So, for a few days now, the main id Software technical team have been discussing the new technology we want to introduce in our upcoming game Doom 3. What creates the most sense of reality in an image? Obviously it's a game of light and shadows, which now takes too long to calculate and puts a lot of pressure on the CPU. John is known for his technological and algorithmic ideas and tricks that have led to crazy breakthroughs in speed and code optimisation.* \
-*What was I talking about... Our chief engineer and founder John Carmack presented a theoretical development that would allow you to cast shadows on a scene after it had gone through the entire graphics pipeline, using a depth and stencil buffer."* 
+*— Безусловно! Итак, вот уже несколько дней в нем главная техническая команда id Software обсуждает новую технологию, которую бы мы хотели представить в нашей разрабатываемой игре Doom 3. Что больше всего создает ощущение реальности на фотографии? Естественно, игра света и тени, которые сейчас рассчитываются слишком долго, сильно нагружая центральный процессор. Джон известен своими технологическими и алгоритмическими идеями и трюками, которые позволяли достичь сумасшедших прорывов в быстродействии и оптимизации кода.* \
+*О чем это я... Нашим главным техническим специалистом и основателем компании Джоном Кармаком была представлена теоретическая наработка, которая бы позволяла накладывать тени на сцене после прохождения всего графического конвейера с помощью буфера глубины и трафаретного буфера.*
 
-*"Oh wow, it gives me goosebumps, tell me more!"*
+*— О как, у меня мурашки по коже, расскажите же поподробнее!*
 
-*"We didn't invite you to this party by chance, the whole team is working on a new way to create shadows in a scene, and John has specifically tasked your department with implementing a very fast and optimized library of all kinds of matrix transformations that will underpin all the mathematical logic of the algorithm: vectors and matrices, transpose and SRT transformations, and many other mathematical objects and operations used in computer graphics.* \
-*FFor a proper and considered transition to the new method, we need a significant and impressive performance change, and you will be in charge of that!"*
+*— Мы вас пригласили на эту вечеринку не случайно, вся команда трудится над новым методом построения теней в сцене, и конкретно ваш отдел был назначен Джоном для реализации максимально быстрой и оптимизированной библиотеки всевозможных матричных преобразований, на которых и будет строиться вся математическая логика алгоритма: вектора и матрицы, транспонирование и SRT-преобразование, а также многие другие математические объекты и операции, которые используются в компьютерной графике. Для корректного и обдуманного перехода к новому методу, необходимы значительные и внушительные изменения в производительности, ответственным за которые будете лично вы!*
 
-*"My team and I are more than happy to help you, and are ready to get to work tomorrow!"*
+*— Я и моя команда очень рады помочь вам и готовы приступить к работе уже завтра!*
 
-*"Perfect! Who knows, maybe one day it will be enough just to cast the rays to create light and shadow... but for now, we're limited by the technology of our time and have to roll with the punches, so let's do it! And yes, don't you dare miss deadlines, he doesn't like that."*
+*— Отлично! Кто знает, может быть, когда-нибудь для света и теней достаточно будет просто пускать лучи... а пока мы ограничены технологиями своего времени и необходимо выкручиваться. Так что вперед! И да, не смейте пропускать дедлайны, он этого не любит.*
 
 ## Introduction
 
-In this project, you will implement your own library for processing numerical matrices in the C programming language. Matrices are one of the basic data structures in programming, used for example to represent table values, for computational tasks, and for neural networks. As part of this project, you will learn more about matrices and reinforce your knowledge of structured programming.
+В данном проекте тебе предстоит реализовать свою библиотеку для обработки числовых матриц на языке программирования С. Матрицы являются одной из базовых структур данных в программировании, например, они применяются для представления табличных значений, для вычислительных задач и нейронных сетей. В рамках этого проекта ты познакомишься с матрицами и закрепишь структурный подход.  
 
 
 # Chapter II
 
 ## Information
 
-### Historical Background
+## Историческая справка
 
-The first mentions of matrices (or as they were then called: "magic squares") were found in ancient China. \
-They became famous in the middle of the 18th century thanks to the work of the famous mathematician Gabriel Cramer, who published his work "Introduction to the Analysis of Algebraic Curves", which described a fundamentally new algorithm for solving systems of linear equations. \
-Soon after, the works of Carl Friedrich Gauss on the "classical" method of solving linear equations, the Cayley-Hamilton theorem, the works of Karl Weierstrass, Georg Frobenius, and other outstanding scientists were published. \
-It was not until 1850 that James Joseph Sylvester introduced the term "matrix" in his work.
+Первые упоминания о матрицах (или как их тогда называли — «волшебных квадратах») были обнаружены на территории Древнего Китая. \
+Свою известность они получили в середине XVIII века благодаря труду знаменитого математика Габриэля Крамера, опубликовавшего свой труд «Введение в анализ алгебраических кривых», в котором описывался принципиально новый алгоритм решения систем линейных уравнений. \
+Вскоре после него были опубликованы работы Карла Фридриха Гаусса о «классическом» методе решения линейных уравнений, теорема Гамильтона-Кели, работы Карла Вейерштрасса, Георга Фробениуса и других выдающихся ученых. \
+И только в 1850 году Джеймс Джозеф Сильвестр в своей работе вводит термин «Матрица».
 
-## Matrix
+## Матрица
 
-A matrix is a collection of numbers arranged in a fixed number of rows and columns.
+Матрица — это набор чисел, расположенных в фиксированном количестве строк и столбцов.
 
-Matrix A is a rectangular table of numbers arranged in m rows and n columns:
+Матрица A — прямоугольная таблица чисел, расположенных в m строках и n столбцах.
 
 ```
     1 2 3
@@ -70,10 +69,9 @@ A = 4 5 6
      9 10 11 12
 ```
 
-You can get the desired element with the help of indices, as follows
-A[1,1] = 1, where the first index is the row number, the second is the column number.
+Получить нужный элемент можно при помощи индексов: A[1,1] = 1, где первый индекс — номер строки, второй — номер столбца.
 
-Matrix A will have elements with the following indices:
+Матрица А будет иметь элементы со следующими индексами:
 
 ```
     (1,1) (1,2) (1,3)
@@ -81,12 +79,12 @@ A = (2,1) (2,2) (2,3)
     (3,1) (3,2) (3,3)
 ```
 
-The order of a matrix is the number of its rows or columns. \
-The main diagonal of a square matrix is the diagonal from the upper left to the lower right corner. \
-A rectangular matrix (B) is a matrix with the number of rows not equal to the number of columns. \
-A square matrix (A) is a matrix with the number of rows equal to the number of columns.
+Порядок матрицы — это число ее строк или столбцов. \
+Главная диагональ квадратной матрицы — это диагональ, идущая из левого верхнего в правый нижний угол. \
+Прямоугольная матрица (В) — это матрица, у которой число строк не равно числу столбцов. \
+Квадратная матрица (А) — это матрица, у которой число строк равно числу столбцов.
 
-A column matrix is a matrix with only one column:
+Матрица-столбец — это матрица, у которой всего один столбец:
 
 ```
     (1,1)
@@ -94,16 +92,15 @@ A = (2,1)
     (n,1)
 ```
 
-A row matrix is a matrix that has only one row:
+Матрица-строка — это матрица, у которой всего одна строка:
 
 ```
 A = (1,1) (1,2) (1,m)
 ```
+Tip: матрицу-столбец и матрицу-строку ещё часто называют векторами.
 
-Tip: A column matrix and a row matrix are also often called vectors.
-
-A diagonal matrix is a square matrix in which all elements outside the main diagonal are zero. \
-An identity matrix is a diagonal matrix with all diagonal elements equal to one:
+Диагональная матрица — это квадратная матрица, у которой все элементы, стоящие вне главной диагонали, равны нулю. \
+Единичная матрица — это диагональная матрица, у которой все диагональные элементы равны единице:
 
 ```
     1 0 0
@@ -111,7 +108,7 @@ A = 0 1 0
     0 0 1
 ```
 
-A triangular matrix is a square matrix with all elements on one side of the main diagonal equal to zero.
+Треугольная матрица — это квадратная матрица, у которой все элементы, расположенные по одну сторону главной диагонали, равны нулю.
 
 ```
     1 2 3
@@ -119,7 +116,7 @@ A = 0 4 5
     0 0 6
 ```
 
-### Matrix structure in C language:
+### Структура матрицы на языке C:
 
 ```c
 typedef struct matrix_struct {
@@ -128,26 +125,27 @@ typedef struct matrix_struct {
     int columns;
 } matrix_t;
 ```
-## Matrix operations
 
-All operations (except matrix comparison) should return the resulting code:
-- 0 - OK
-- 1 - Error, incorrect matrix
-- 2 - Calculation error (mismatched matrix sizes; matrix for which calculations cannot be performed, etc.)
+## Операции над матрицами
 
-### Creating matrices (create_matrix)
+Все операции (кроме сравнения матриц) должны возвращать результирующий код:  
+- 0 — OK;
+- 1 — Ошибка, некорректная матрица;
+- 2 — Ошибка вычисления (несовпадающие размеры матриц; матрица, для которой нельзя провести вычисления и т. д.).
+
+### Создание матриц (create_matrix)
 
 ```c
 int s21_create_matrix(int rows, int columns, matrix_t *result);
 ```
 
-### Cleaning of matrices (remove_matrix)
+### Очистка матриц (remove_matrix)
 
 ```c
 void s21_remove_matrix(matrix_t *A);
 ```
 
-### Matrix comparison (eq_matrix)
+### Сравнение матриц (eq_matrix)
 
 ```c
 #define SUCCESS 1
@@ -156,21 +154,20 @@ void s21_remove_matrix(matrix_t *A);
 int s21_eq_matrix(matrix_t *A, matrix_t *B);
 ```
 
-The matrices A, B are equal |A = B| if they have the same dimensions and the corresponding elements are identical, thus for all i and j: A(i,j) = B(i,j)
+Две матрицы A, B совпадают |A = B|, если совпадают их размеры и соответствующие элементы равны, то есть при всех i, j A(i,j) = B(i,j).
 
-The comparison must be up to and including 6 decimal places.
+Сравнение должно происходить вплоть до шестого знака после запятой включительно.
 
-### Adding (sum_matrix) and subtracting matrices (sub_matrix)
+### Сложение (sum_matrix) и вычитание матриц (sub_matrix)
 
 ```c
 int s21_sum_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 int s21_sub_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 ```
 
-The sum of two matrices A = m × n and B = m × n of the same size is a matrix C = m × n = A + B of the same size whose elements are defined by the equations C(i,j) = A(i,j) + B(i,j).
+Суммой двух матриц A = m × n и B = m × n одинаковых размеров называется матрица C = m × n = A + B тех же размеров, элементы которой определяются равенствами C(i,j) = A(i,j) + B(i,j).
 
-The difference of two matrices A = m × n and B = m × n of the same size is a matrix C = m × n = A - B of the same size whose elements are defined by the equations C(i,j) = A(i,j) - B(i,j).
-
+Разностью двух матриц A = m × n и B = m × n одинаковых размеров называется матрица C = m × n = A - B тех же размеров, элементы которой определяются равенствами C(i,j) = A(i,j) - B(i,j).
 
 ```
             1 2 3   1 0 0   2 2 3
@@ -178,14 +175,14 @@ The difference of two matrices A = m × n and B = m × n of the same size is a m
             0 0 6   3 4 1   3 4 7
 ```
 
-### Matrix multiplication by scalar (mult_number). Multiplication of two matrices (mult_matrix)
+### Умножение матрицы на число (mult_number). Умножение двух матриц (mult_matrix)
 
 ```c
 int s21_mult_number(matrix_t *A, double number, matrix_t *result);
 int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 ```
 
-The product of the matrix A = m × n by the number λ is the matrix B = m × n = λ × A whose elements are defined by the equations B = λ × A(i,j).
+Произведением матрицы A = m × n на число λ называется матрица B = m × n = λ × A, элементы которой определяются равенствами B = λ × A(i,j).
 
 ```
                 1 2 3   2 4 6   
@@ -193,14 +190,15 @@ B = 2 × A = 2 × 0 4 2 = 0 8 4
                 2 3 4   4 6 8   
 ```
 
-The product of A = m × k by B = k × n is a matrix C = m × n = A × B of size m × n whose elements are defined by the equation C(i,j) = A(i,1) × B(1,j) + A(i,2) × B(2,j) + ... + A(i,k) × B(k,j).
+Произведением матрицы A = m × k на матрицу B = k × n называется матрица C = m × n = A × B размера m × n, элементы которой определяются равенством C(i,j) = A(i,1) × B(1,j) + A(i,2) × B(2,j) + … + A(i,k) × B(k,j).
 
 ```
             1 4    1 -1  1    9 11 17   
-C = A × B = 2 5  × 2  3  4 = 12 13 22
+C = A × B = 2 5  × 2  3  4 = 12 13 22 
             3 6              15 15 27
 ```
-The components of matrix C are calculated as follows:
+
+Компоненты матрицы С вычисляются следующим образом:
 
 ```
 C(1,1) = A(1,1) × B(1,1) + A(1,2) × B(2,1) = 1 × 1 + 4 × 2 = 1 + 8 = 9
@@ -214,27 +212,29 @@ C(3,2) = A(3,1) × B(1,2) + A(3,2) × B(2,2) = 3 × (-1) + 6 × 3 = (-3) + 18 = 
 C(3,3) = A(3,1) × B(1,3) + A(3,2) × B(2,3) = 3 × 1 + 6 × 4 = 3 + 24 = 27			
 ```
 
-### Matrix transpose (transpose)
+### Транспонирование матрицы (transpose)
 
 ```c
 int s21_transpose(matrix_t *A, matrix_t *result);
 ```
 
-The transpose of matrix A is in switching its rows with its columns with their numbers retained
+Транспонирование матрицы А заключается в замене строк этой матрицы ее столбцами с сохранением их номеров.
 
 ```
           1 4   1 2 3
 A = A^T = 2 5 = 4 5 6
           3 6
 ```
-### Minor of matrix and matrix of algebraic complements (calc_complements)
+
+### Минор матрицы и матрица алгебраических дополнений (calc_complements)
+
 ```c
 int s21_calc_complements(matrix_t *A, matrix_t *result);
 ```
 
-Minor M(i,j) is a (n-1)-order determinant obtained by deleting out the i-th row and the j-th column from the matrix A.
+Минором M(i,j) называется определитель (n-1)-го порядка, полученный вычёркиванием из матрицы A i-й строки и j-го столбца.
 
-For the following matrix:
+Для матрицы:
 
 ```
     1 2 3
@@ -242,7 +242,7 @@ A = 0 4 2
     5 2 1
 ```
 
-The minor of the first element of the first row is:
+Минором первого элемента первой строки будет:
 
 ```
 M(1,1) = 4 2
@@ -251,7 +251,7 @@ M(1,1) = 4 2
 |M| = 4 - 4 = 0
 ```
 
-The minors of matrix will look like this:
+Матрица миноров будет иметь вид:
 
 ```
      0 -10 -20
@@ -259,9 +259,9 @@ M = -4 -14  -8
     -8   2   4
 ```
 
-The algebraic complement of a matrix element is the value of the minor multiplied by -1^(i+j).
+Алгебраическим дополнением элемента матрицы является значение минора, умноженное на -1^(i+j).
 
-The matrix of algebraic complement will look like this:
+Матрица алгебраических дополнений будет иметь вид:
 
 ```
       0  10 -20
@@ -269,18 +269,18 @@ M. =  4 -14   8
      -8  -2   4
 ```
 
-### Matrix determinant
+### Определитель матрицы (determinant)
 
 ```c
 int s21_determinant(matrix_t *A, double *result);
 ```
 
-The determinant is a number that is associated to each square matrix and calculated from the elements using special formulas. \
-Tip: The determinant can only be calculated for a square matrix.
+Определитель (детерминант) — это число, которое ставят в соответствие каждой квадратной матрице и вычисляют из элементов по специальным формулам. \
+Tip: определитель может быть вычислен только для квадратной матрицы.
 
-The determinant of a matrix equals the sum of the products of elements of the row (column) and the corresponding algebraic complements.
+Определитель матрицы равен сумме произведений элементов строки (столбца) на соответствующие алгебраические дополнения.
 
-Finding the determinant of matrix A by the first row:
+Поиск определителя для матрицы A по первой строке:
 
 ```
     1 2 3
@@ -293,19 +293,19 @@ A = 4 5 6
 |A| = 0
 ```
 
-### Inverse of the matrix (inverse_matrix)
+### Обратная матрица (inverse_matrix)
 
 ```c
 int s21_inverse_matrix(matrix_t *A, matrix_t *result);
 ```
 
-A matrix A to the power of -1 is called the inverse of a square matrix A if the product of these matrices equals the identity matrix.
+Матрицу A в степени -1 называют обратной к квадратной матрице А, если произведение этих матриц равняется единичной матрице.
 
-If the determinant of the matrix is zero, then it does not have an inverse.
+Обратной матрицы не существует, если определитель равен 0.
 
-The formula to calculate the inverse of matrix is $`A^{-1}=\frac{1} {|A|} × A_*^T`$
+Обратная матрица находится по формуле $`A^{-1}=\frac{1} {|A|} × A_*^T`$
 
-The following matrix is given:
+Дана матрица:
 
 ```
      2  5  7
@@ -313,13 +313,13 @@ A =  6  3  4
      5 -2 -3
 ```
 
-Finding the determinant:
+Поиск определителя:
 
 ``` |A| = -1 ```
 
-Determinant |A| != 0 -> matrix has an inverse.
+Определитель |A| != 0 -> обратная матрица существует.
 
-Construction of minor matrix:
+Построение матрицы миноров:
 
 ```
     -1 -38 -27
@@ -327,8 +327,7 @@ Construction of minor matrix:
     -1 -34 -24
 ```
 
-
-The matrix of algebraic complements:
+Матрица алгебраических дополнений будет равна:
 
 ```
      -1  38 -27
@@ -336,7 +335,7 @@ The matrix of algebraic complements:
      -1  34 -24
 ```
 
-The transpose of matrix of algebraic complements:
+Транспонированная матрица алгебраических дополнений будет равна:
 
 ```
         -1   1  -1
@@ -344,7 +343,7 @@ The transpose of matrix of algebraic complements:
        -27  29 -24
 ```
 
-The inverse matrix will look like this:
+Обратная матрица будет иметь следующий вид:
 
 ```
                            1  -1   1
@@ -352,23 +351,23 @@ A^(-1) =  1/|A| * M^T. = -38  41 -34
                           27 -29  24 
 ```
 
-
 # Chapter III
 
-## Part 1. Implementation of the matrix.h library functions
+## Part 1. Реализация функции библиотеки matrix.h
 
-Implement basic operations with matrices (partially described [above](#matrix-operations)): create_matrix (creation), remove_matrix (cleaning and destruction), eq_matrix (comparison), sum_matrix (addition), sub_matrix (subtraction), mult_matrix (multiplication), mult_number (multiplication by number), transpose (transpose), determinant (calculation of determinant), calc_complements (calculation of matrix of algebraic complements), inverse_matrix (finding inverse of the matrix).
+Реализуй основные действия с матрицами (частично описанные [выше](#операции-над-матрицами)): create_matrix (создание), remove_matrix (очистка и уничтожение), eq_matrix (сравнение), sum_matrix (сложение), sub_matrix (вычитание), mult_matrix (умножение), mult_number (умножение на число), transpose (транспонирование), determinant (вычисление определителя), calc_complements (вычисление матрицы алгебраических дополнений), inverse_matrix (поиск обратной матрицы). 
 
-- The library must be developed in C language of C11 standard using gcc compiler.
-- The library code must be located in the src folder on the develop branch.
-- Do not use outdated and legacy language constructions and library functions. Pay attention to the legacy and obsolete marks in the official documentation on the language and the libraries used. Use the POSIX.1-2017 standard.
-- When writing code it is necessary to follow the Google style for C++ ([link](https://google.github.io/styleguide/cppguide.html)).
-- Make it as a static library named *s21_matrix.a* (with the s21_matrix.h header file).
-- The library must be developed according to the principles of structured programming.
-- Use prefix s21_ before each function.
-- Prepare full coverage of library functions code with unit-tests using the Check library.
-- Unit tests must cover at least 80% of each function (checked using gcov).
-- Provide a Makefile for building the library and tests (with targets all, clean, test, s21_matrix.a, gcov_report).
-- The gcov_report target should generate a gcov report in the form of an html page. Unit tests must be run with gcov flags to do this.
-- The matrix must be implemented as the structure described [above](#matrix-structure-in-c-language).
-- Verifiable accuracy of the fractional part is up to 6 decimal places.
+- Библиотека должна быть разработана на языке С стандарта C11 с использованием компилятора gcc.
+- Код библиотеки должен находиться в папке src в ветке develop.
+- Не используй устаревшие и выведенные из употребления конструкции языка и библиотечные функции. Обращай внимание на пометки legacy и obsolete в официальной документации по языку и используемым библиотекам. Ориентируйся на стандарт POSIX.1-2017.
+- При написании кода необходимо придерживаться Google Style, заимствованному из стандарта для языка C++ ([ссылка](https://google.github.io/styleguide/cppguide.html)).
+- Оформи решение как статическую библиотеку с названием *s21_matrix.a* (с заголовочным файлом s21_matrix.h).
+- Библиотека должна быть разработана в соответствии с принципами структурного программирования.
+- Перед каждой функцией используй префикс s21_.
+- Подготовь полное покрытие unit-тестами функций библиотеки c помощью библиотеки Check.
+- Unit-тесты должны покрывать не менее 80% каждой функции.
+- Предусмотри Makefile для сборки библиотеки и тестов (с целями all, clean, test, s21_matrix.a, gcov_report).
+- В цели gcov_report должен формироваться отчёт gcov в виде html страницы. Для этого unit-тесты должны запускаться с флагами gcov.
+- Матрица должна быть реализована в виде структуры, описанной [выше](#структура-матрицы-на-языке-c).
+- Проверяемая точность дробной части — максимум 6 знаков после запятой.
+
